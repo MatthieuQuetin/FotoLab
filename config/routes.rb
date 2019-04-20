@@ -7,6 +7,7 @@ Rails.application.routes.draw do
   resources :repositories, only: %i[index show] do
     resources :photos, only: %i[index new create destroy] do
       resources :reviews, only: %i[index new create destroy]
+    end
   end
 end
 # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
